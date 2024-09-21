@@ -57,7 +57,25 @@
   scroll-behavior: smooth;
 }
 
+.background {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: 1; /* Detrás del contenido */
+}
 
+.gif-background {
+  width: 10%; /* O ajusta según tu preferencia */
+  height: auto; /* Mantiene la proporción */
+  position: absolute;
+  top: 80%;
+  right: 1%;
+  transform: translate(-50%, -50%); /* Centra el GIF */
+  z-index: -1; /* Asegúrate de que esté detrás del contenido */
+}
 
 
 /*--------------------------------------------------------------
