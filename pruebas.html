@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ximdiva</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden; /* Oculta la barra de desplazamiento */
+        }
+    </style>
+</head>
+<body>
+    <script>
+        let noiseScale = 0.02; // Escala del ruido
+        let cols, rows;
+        let noiseArr = [];
+
+        function setup() {
+            createCanvas(windowWidth, windowHeight);
+            cols = floor(width / 10);
+            rows = floor(height / 10);
+            for (let x = 0; x < cols; x++) {
+                noiseArr[x] = [];
+                for (let y = 0; y < rows; y++) {
+                    noiseArr[x][y] = noise(x * noiseScale, y * noiseScale);
+                }
+            }
+        }
+
+        function draw() {
+            for (let x = 0; x < cols; x++) {
+                for (let y = 0; y < rows; y++) {
+                    let val = noiseArr[x][y];
+                    stroke(255, val * 255);
+                    point(x * 10, y * 10);
+                    noiseArr[x][y] += 0.01; // Cambia el valor de ruido para animar
+                }
+            }
+        }
+
+        function windowResized() {
+            resizeCanvas(windowWidth, windowHeight);
+            cols = floor(width / 10);
+            rows = floor(height / 10);
+        }
+    </script>
+</body>
+</html>

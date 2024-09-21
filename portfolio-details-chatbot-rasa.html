@@ -36,7 +36,7 @@
   ======================================================== -->
 </head>
 
-<body class="contact-page">
+<body class="portfolio-details-page">
 
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
@@ -53,7 +53,7 @@
           <li><a href="about.html">About</a></li>
           <li><a href="resume.html">Resume</a></li>
           <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="contact.html" class="active">Contact</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
@@ -69,8 +69,6 @@
         <div class="container">
           <div class="row d-flex justify-content-center text-center">
             <div class="col-lg-8">
-              <h1>Contact</h1>
-              <p class="mb-0">Welcome to Ximdiva! We are a creative hub dedicated to bringing your visions to life. Whether you're looking for digital services, design inspiration, or just a touch of creativity, we're here to help. Explore our journey and see how we can work together to make something amazing.</p>
             </div>
           </div>
         </div>
@@ -79,87 +77,75 @@
         <div class="container">
           <ol>
             <li><a href="index.html">Home</a></li>
-            <li class="current">Contact</li>
+            <li class="current">AI Intelligence Details</li>
           </ol>
         </div>
       </nav>
     </div><!-- End Page Title -->
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact section">
+    <!-- Portfolio Details Section -->
+    <section id="portfolio-details" class="portfolio-details section">
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
         <div class="row gy-4">
 
-          <div class="col-md-6">
-            <div class="info-item d-flex align-items-center" data-aos="fade-up" data-aos-delay="200">
-              <i class="icon bi bi-geo-alt flex-shrink-0"></i>
-              <div>
-                <h3>Address</h3>
-                <p>Tonalá, Jalisco</p>
-              </div>
-            </div>
-          </div><!-- End Info Item -->
+          <div class="col-lg-8">
+            <div class="portfolio-details-slider swiper init-swiper">
 
-          <div class="col-md-6">
-            <div class="info-item d-flex align-items-center" data-aos="fade-up" data-aos-delay="400">
-              <i class="icon bi bi-envelope flex-shrink-0"></i>
-              <div>
-                <h3>Email Us</h3>
-                <p>ximdiva@gmail.com</p>
-              </div>
-            </div>
-          </div><!-- End Info Item -->
+              <script type="application/json" class="swiper-config">
+                {
+                  "loop": true,
+                  "speed": 600,
+                  "autoplay": {
+                    "delay": 5000
+                  },
+                  "slidesPerView": "auto",
+                  "pagination": {
+                    "el": ".swiper-pagination",
+                    "type": "bullets",
+                    "clickable": true
+                  }
+                }
+              </script>
 
-          <div class="col-md-6">
-            <div class="info-item d-flex align-items-center" data-aos="fade-up" data-aos-delay="500">
-              <i class="icon bi bi-share flex-shrink-0"></i>
-              <div>
-                <h3>Social Profiles</h3>
-                <div class="social-links">
-                  <a href="https://www.facebook.com/ximena.diazvargas/" target="_blank" rel="noopener noreferrer"><i class="bi bi-facebook"></i></a>
-                  <a href="https://www.linkedin.com/in/ximena-díaz-338a46295/" target="_blank" rel="noopener noreferrer"><i class="bi bi-linkedin"></i></a>
+              <div class="swiper-wrapper align-items-center">
+
+                <div class="swiper-slide">
+                  <img src="assets\img\portfolio\Bot.png" alt="">
                 </div>
+
               </div>
+              <div class="swiper-pagination"></div>
             </div>
-          </div><!-- End Info Item -->
+          </div>
+
+          <div class="col-lg-4">
+            <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
+              <h3>Project information</h3>
+              <ul>
+                <li><strong>Name</strong>: Chatbot</li>
+                <li><strong>Project</strong>: AI Chatbot Development</li>
+                <li><strong>Category</strong>: Artifical Intelligence</li>
+                <li><strong>Client</strong>: CUCEI University</li>
+                <li><strong>Date</strong>: March, 2024</li>
+                <li><strong>Github Project</strong>: <a href="https://github.com/vichavez/chatbot"> Repository</li>
+                <a >(Note: The repository is private; request access if needed)</a>
+              </ul>
+            </div>
+            <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
+              <h2>About Rasa Chatbot</h2>
+              <p>
+                This Rasa-based chatbot leverages artificial intelligence to provide quick and accurate responses to frequently asked questions. The system enhances customer service by automating interactions, optimizing resources, and improving user satisfaction. Primarily used by students, the chatbot is tailored to answer common inquiries efficiently.
+              </p>
+            </div>
+          </div>
 
         </div>
 
-        <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="600">
-          <div class="row gy-4">
-
-            <div class="col-md-6">
-              <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
-            </div>
-
-            <div class="col-md-6 ">
-              <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
-            </div>
-
-            <div class="col-md-12">
-              <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
-            </div>
-
-            <div class="col-md-12">
-              <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
-            </div>
-
-            <div class="col-md-12 text-center">
-              <div class="loading">Loading</div>
-              <div class="error-message"></div>
-              <div class="sent-message">Your message has been sent. Thank you!</div>
-
-              <button type="submit">Send Message</button>
-            </div>
-
-          </div>
-        </form><!-- End Contact Form -->
-
       </div>
 
-    </section><!-- /Contact Section -->
+    </section><!-- /Portfolio Details Section -->
 
   </main>
 
@@ -195,7 +181,6 @@
             </div>
         </div>
     </div>
-  </footer>
 
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
